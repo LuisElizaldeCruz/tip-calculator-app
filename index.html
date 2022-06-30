@@ -26,27 +26,30 @@
 <body>
   <main class="calculadora">
     <div class="costo">
-      Bill
-
-      Select Tip %
-      5%
-      10%
-      15%
-      25%
-      50%
-      Custom
-
-      Number of People
-      <div>
+      <div class="costoInicial">
         <label>Bill</label>
-        <label>$</label>
+        <label class="iconDolar">$</label>
         <input type="text">
       </div>
 
       <div class="porcentajes">
-        <label>Select</label>
+        <label class="titulo">Select Tip</label>
+        <button class="porcentajes__btn uno">5<span>%</span></button>
+        <button class="porcentajes__btn dos">10<span>%</span> </button>
+        <button class="porcentajes__btn tres">15<span>%</span> </button>
+        <button class="porcentajes__btn cuatro">25<span>%</span> </button>
+        <button class="porcentajes__btn cinco">55<span>%</span> </button>
+        <input class="txtEntrada seis" type="number">
+      </div>
+
+      <div class="personas">
+        <label>Number of People</label>
+        <label class="mensajeError">Can't by zero</label>
+        <input type="number">
       </div>
     </div>
+
+    <!-- apartado de montos -->
     <div class="resultado">
       <div class="monto">
         <label>
