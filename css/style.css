@@ -12,8 +12,76 @@
 --Very-light-grayish-cyan: hsl(189, 41%, 97%);
 --White: hsl(0, 0%, 100%);
 
+--light-strong-cyan: hsl(171, 74%, 75%);
+
 }
 
 body{
     background-color: var(--Light-grayish-cyan);
 }
+
+.calculadora{
+    padding: 15px;
+    display: flex;
+    background-color: var(--White);
+    height: auto;
+}
+
+.costo{
+    max-width: 50%;
+    
+}
+
+.resultado{
+    width: 50%;
+    max-width: 50%;
+    background-color: var(--Very-dark-cyan);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.resultado div{
+    display: flex;
+    width: auto;
+    align-items: center;
+}
+
+.resultado div label{
+    width: 50%;
+}
+
+.resultado div label:nth-child(2){
+    text-align: end;
+}
+
+.monto{
+    margin-bottom: 30px;
+}
+
+.monto>label, .total>label{
+    color: var(--White);
+}
+
+.monto>.montoNumber, .total>.totalNumber{
+    font-size: 30px;
+    font-weight: bolder;
+    color: var(--Strong-cyan);
+}
+
+.btnReset{
+    /* margin-top: 100px; */
+    background-color: var(--Strong-cyan);
+    border-radius: 5px;
+    width: 80%;
+    margin: 100px auto 10px auto;
+    height: 30px;
+    border-color: transparent;
+}
+
+.btnReset:hover{
+    cursor: pointer;
+    background-color: var(--light-strong-cyan);
+}
+
