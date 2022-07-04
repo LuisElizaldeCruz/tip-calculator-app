@@ -47,6 +47,7 @@ body {
 
 .costoInicial input{
     height: 20px;
+    outline: none;
 }
 .costoInicial input:hover{
     cursor: pointer;
@@ -91,6 +92,7 @@ color: grey;
     height: 20px;
     /* width: 42px; */
     width: auto;
+    outline: none;
 }
 
 .titulo{
@@ -105,6 +107,14 @@ color: grey;
 .seis{grid-area: seis;}
 
 .seis:hover{
+    cursor: pointer;
+}
+
+.numeroPersonas{
+    outline: none;
+}
+
+.numeroPersonas:hover{
     cursor: pointer;
 }
 
