@@ -2,22 +2,21 @@
     /* Primary */
 
     --Strong-cyan: hsl(172, 67%, 45%);
-
     /* Neutral */
-
     --Very-dark-cyan: hsl(183, 100%, 15%);
     --Dark-grayish-cyan: hsl(186, 14%, 43%);
     --Grayish-cyan: hsl(184, 14%, 56%);
     --Light-grayish-cyan: hsl(185, 41%, 84%);
     --Very-light-grayish-cyan: hsl(189, 41%, 97%);
     --White: hsl(0, 0%, 100%);
-
     --light-strong-cyan: hsl(171, 74%, 75%);
-
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 
 body {
     background-color: var(--Light-grayish-cyan);
+    font-family: 'Space Mono', monospace;
 }
 
 .calculadora {
@@ -38,42 +37,44 @@ body {
     padding: 0 40px 0 0;
 }
 
-.costoInicial{
+.costoInicial {
     display: flex;
     flex-direction: column;
     /* padding: 0 20px; */
     position: relative;
 }
 
-.costoInicial input{
+.costoInicial input {
     height: 20px;
     outline: none;
-    border-style: solid;
+    border-style: none;
     border-radius: 5px;
+    background-color: var(--Very-light-grayish-cyan);
 }
-.costoInicial input:hover{
+
+.costoInicial input:hover {
     cursor: pointer;
     border-color: var(--Strong-cyan);
 }
 
-.iconDolar{
-position: absolute;
-bottom: 0;
-left: 5px;
-z-index: 10px;
-color: grey;
+.iconDolar {
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    z-index: 10px;
+    color: grey;
 }
 
-.porcentajes{
+.porcentajes {
     display: grid;
-    grid-template-columns: 1fr 1fr minmax(33%,1fr);
-    grid-template-areas:"titulo titulo titulo"
-                        "uno dos tres"
-                        "cuatro cinco seis";
+    grid-template-columns: 1fr 1fr minmax(33%, 1fr);
+    grid-template-areas: "titulo titulo titulo"
+        "uno dos tres"
+        "cuatro cinco seis";
     gap: 10px;
 }
 
-.porcentajes__btn{
+.porcentajes__btn {
     background-color: var(--Very-dark-cyan);
     color: var(--White);
     height: 30px;
@@ -82,42 +83,60 @@ color: grey;
     border-color: transparent;
     font-weight: bold;
     cursor: pointer;
-    
+
 }
 
-.porcentajes__btn:hover{
+.porcentajes__btn:hover {
     background-color: var(--light-strong-cyan);
     color: var(--Very-dark-cyan);
     font-weight: bold;
 }
 
-.porcentajes__btn:focus{
+.porcentajes__btn:focus {
     background-color: var(--Strong-cyan);
     color: var(--Very-dark-cyan);
 }
 
-.txtEntrada{
+.txtEntrada {
     height: 20px;
     /* width: 42px; */
     width: auto;
     outline: none;
 }
 
-.titulo{
+.titulo {
     grid-area: titulo;
 }
 
-.uno{grid-area: uno;}
-.dos{grid-area: dos;}
-.tres{grid-area: tres;}
-.cuatro{grid-area: cuatro;}
-.cinco{grid-area: cinco;}
-.seis{grid-area: seis;}
+.uno {
+    grid-area: uno;
+}
 
-.seis:hover{
+.dos {
+    grid-area: dos;
+}
+
+.tres {
+    grid-area: tres;
+}
+
+.cuatro {
+    grid-area: cuatro;
+}
+
+.cinco {
+    grid-area: cinco;
+}
+
+.seis {
+    grid-area: seis;
+}
+
+.seis:hover {
     cursor: pointer;
 }
-.personas{
+
+.personas {
     width: auto;
     /* border-color: aqua;
     border-style: solid; */
@@ -125,24 +144,26 @@ color: grey;
     flex-direction: column;
 }
 
-.personas>div{
+.personas>div {
     display: flex;
     justify-content: space-between;
 }
 
-.estadoErr{
+.estadoErr {
     display: none;
     color: red;
 }
 
 
-.numeroPersonas{
+.numeroPersonas {
     outline: none;
-    border-style: solid;
+    border-style: none;
     border-radius: 5px;
+    height: 20px;
+    background-color: var(--Very-light-grayish-cyan);
 }
 
-.numeroPersonas:hover{
+.numeroPersonas:hover {
     cursor: pointer;
 }
 
@@ -200,4 +221,3 @@ color: grey;
     cursor: pointer;
     background-color: var(--light-strong-cyan);
 }
-
