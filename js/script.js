@@ -1,35 +1,44 @@
-let porcen = 0;
+//let porcen = 0;
 let btnporcentaje = document.querySelector(".porcentajes");
-let custoP = document.querySelector(".txtEntrada");//porcentaje personalizado
 
-let monto = document.querySelector(".montoNumber");
-let tNumber = document.querySelector(".totalNumber");
+let custoP = document.querySelector(".txtEntrada");//porcentaje personalizado
+let iCosto = document.querySelector(".costoI");//costo inicial
+let numPersonas = document.querySelector(".numeroPersonas");
+
+let monto = document.querySelector(".montoNumber");//etiqueta de tip amount/person
+let tNumber = document.querySelector(".totalNumber");//etiqueta de total/person
 
 let btn = document.querySelector(".btnReset");
 btn.setAttribute("disabled", "disabled");
+
+btn.addEventListener("click", () => {
+    if(!btn.hasAttribute("disabled")) {
+    custoP.value=0;
+    iCosto.value=0;
+    numPersonas.value=0;
+
+    monto.textContent = "$0.00";
+    tNumber.textContent = "$0.00";
+    }
+   
+})
 
 let total = (costo, porcentaje, cPersonas) => {
     let tipPersona = ((costo * porcentaje) / 100) / cPersonas;
     let totalPersona = (costo / cPersonas) + tipPersona;
     console.log("tip amount: " + tipPersona.toPrecision(3));
     console.log("total: " + totalPersona.toPrecision(4));
-    // if(tipPersona != NaN && totalPersona != NaN){
-    monto.innerHTML = tipPersona.toPrecision(3);
-    tNumber.innerHTML = totalPersona.toPrecision(4);
-    //}
-    //else{
-    //   monto.innerHTML = "0.0";
-    // tNumber.innerHTML ="0.0";
-    // console.log("el elemento esta vacio");
-    //}
+   
+    monto.innerHTML =`$ ${tipPersona.toPrecision(3)}`;
+    tNumber.innerHTML =`$ ${totalPersona.toPrecision(4)}`;
 }
 
 
 let envioDatos = (e) => {
-    let iCosto = document.querySelector(".costoI").value;//costo inicial
-    let numPersonas = document.querySelector(".numeroPersonas").value;
+   // let iCosto = document.querySelector(".costoI").value;//costo inicial
+   // let numPersonas = document.querySelector(".numeroPersonas").value;
 
-    if (iCosto >= 1 && numPersonas >= 1) {
+    if (iCosto.value >= 1 && numPersonas.value >= 1) {
         btn.removeAttribute("disabled");
         if (e.target.matches(".txtEntrada")) {
             console.log("se presiono el input");
@@ -37,8 +46,7 @@ let envioDatos = (e) => {
             btnporcentaje.addEventListener("keyup", envioDatos);
             if (e.target.value >= 1) {
 
-
-                total(parseFloat(iCosto), parseInt(e.target.value), parseInt(numPersonas));
+                total(parseFloat(iCosto.value), parseInt(e.target.value), parseInt(numPersonas.value));
 
                 console.log("se presiono el boton", e.target);
                 console.log(e.target.value);
@@ -48,13 +56,11 @@ let envioDatos = (e) => {
             }
 
         } else {
-            total(parseFloat(iCosto), parseInt(e.target.textContent), parseInt(numPersonas));
+            total(parseFloat(iCosto.value), parseInt(e.target.textContent), parseInt(numPersonas.value));
         }
     } else {
         console.log("revise los datos");
     }
-
     // btnporcentaje.addEventListener("click", envioDatos);
-
 };
 btnporcentaje.addEventListener("click", envioDatos);

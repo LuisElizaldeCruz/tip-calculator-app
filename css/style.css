@@ -48,9 +48,12 @@ body {
 .costoInicial input{
     height: 20px;
     outline: none;
+    border-style: solid;
+    border-radius: 5px;
 }
 .costoInicial input:hover{
     cursor: pointer;
+    border-color: var(--Strong-cyan);
 }
 
 .iconDolar{
@@ -88,6 +91,11 @@ color: grey;
     font-weight: bold;
 }
 
+.porcentajes__btn:focus{
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
 .txtEntrada{
     height: 20px;
     /* width: 42px; */
@@ -109,9 +117,29 @@ color: grey;
 .seis:hover{
     cursor: pointer;
 }
+.personas{
+    width: auto;
+    /* border-color: aqua;
+    border-style: solid; */
+    display: flex;
+    flex-direction: column;
+}
+
+.personas>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.estadoErr{
+    display: none;
+    color: red;
+}
+
 
 .numeroPersonas{
     outline: none;
+    border-style: solid;
+    border-radius: 5px;
 }
 
 .numeroPersonas:hover{
@@ -172,3 +200,4 @@ color: grey;
     cursor: pointer;
     background-color: var(--light-strong-cyan);
 }
+
