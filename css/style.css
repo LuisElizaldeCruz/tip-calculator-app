@@ -59,6 +59,9 @@ body {
     border-radius: 5px;
     background-color: var(--Very-light-grayish-cyan);
     text-align: end;
+    color: var(--Very-dark-cyan);
+    font-weight: 700;
+    font-size: 15px;
 }
 
 .costoInicial input:hover {
@@ -121,9 +124,11 @@ body {
     outline: none;
     border-style: solid;
     border-color: transparent;
-    color: var(--Dark-grayish-cyan);
+    /* color: var(--Dark-grayish-cyan); */
     font-weight: 700;
     text-align: center;
+    color: var(--Very-dark-cyan);
+    font-size: 15px;
 }
 
 .txtEntrada:hover {
@@ -180,6 +185,8 @@ body {
 }
 
 .estadoErr {
+    font-weight: 700;
+    font-size: 12px;
     display: none;
     color: red;
 }
@@ -192,6 +199,9 @@ body {
     height: 20px;
     background-color: var(--Very-light-grayish-cyan);
     text-align: end;
+    color: var(--Very-dark-cyan);
+    font-weight: 700;
+    font-size: 15px;
 }
 
 .numeroPersonas:hover {
