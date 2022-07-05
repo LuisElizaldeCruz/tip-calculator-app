@@ -37,8 +37,9 @@ let total = (costo, porcentaje, cPersonas) => {
 let envioDatos = (e) => {
    // let iCosto = document.querySelector(".costoI").value;//costo inicial
    // let numPersonas = document.querySelector(".numeroPersonas").value;
-
+   //btn.style.backgroundColor = "hsl(183, 100%, 15%)";
     if (iCosto.value >= 1 && numPersonas.value >= 1) {
+        //btn.disabled = false;/*pendiante*/ 
         btn.removeAttribute("disabled");
         if (e.target.matches(".txtEntrada")) {
             console.log("se presiono el input");

@@ -44,25 +44,36 @@ body {
     position: relative;
 }
 
+.costoInicial:nth-child(1) {
+    color: var(--Dark-grayish-cyan);
+    font-weight: 700;
+    font-size: 12px;
+
+}
+
 .costoInicial input {
     height: 20px;
     outline: none;
-    border-style: none;
+    border-style: solid;
+    border-color: transparent;
     border-radius: 5px;
     background-color: var(--Very-light-grayish-cyan);
+    text-align: end;
 }
 
 .costoInicial input:hover {
     cursor: pointer;
-    border-color: var(--Strong-cyan);
+    border-style: solid;
+    border-color: var(--light-strong-cyan);
 }
 
 .iconDolar {
     position: absolute;
-    bottom: 0;
+    bottom: 4px;
     left: 5px;
     z-index: 10px;
-    color: grey;
+    color: var(--Grayish-cyan);
+    font-size: 14px;
 }
 
 .porcentajes {
@@ -72,6 +83,12 @@ body {
         "uno dos tres"
         "cuatro cinco seis";
     gap: 10px;
+}
+
+.porcentajes>.titulo {
+    color: var(--Dark-grayish-cyan);
+    font-weight: 700;
+    font-size: 12px;
 }
 
 .porcentajes__btn {
@@ -98,10 +115,20 @@ body {
 }
 
 .txtEntrada {
-    height: 20px;
-    /* width: 42px; */
+    height: auto;
     width: auto;
+    /* width: 25px; */
     outline: none;
+    border-style: solid;
+    border-color: transparent;
+    color: var(--Dark-grayish-cyan);
+    font-weight: 700;
+    text-align: center;
+}
+
+.txtEntrada:hover {
+    border-style: solid;
+    border-color: var(--light-strong-cyan);
 }
 
 .titulo {
@@ -147,6 +174,9 @@ body {
 .personas>div {
     display: flex;
     justify-content: space-between;
+    color: var(--Dark-grayish-cyan);
+    font-weight: 700;
+    font-size: 12px;
 }
 
 .estadoErr {
@@ -161,6 +191,7 @@ body {
     border-radius: 5px;
     height: 20px;
     background-color: var(--Very-light-grayish-cyan);
+    text-align: end;
 }
 
 .numeroPersonas:hover {
@@ -198,6 +229,12 @@ body {
 .monto>label,
 .total>label {
     color: var(--White);
+    font-weight: 700;
+}
+
+.monto>label>span,
+.total>label>span {
+    font-weight: normal;
 }
 
 .monto>.montoNumber,
